@@ -8,9 +8,20 @@ fetch(weatherApi)
   return Response.json();  
 })
 .then((Response) =>{
-  document.getElementById('degree').innerHTML=Response.main.temp;
+  document.getElementById('degree').innerHTML=Response.main.temp + " ºC";
   console.log(Response);
+
+  //icons
+  let iconString = "http://openweathermap.org/img/wn/"+Response.weather[0].icon+"@2x.png";
+  console.log(iconString);
+  document.getElementById('weatherIcon').src=iconString;
+
+  //description
+  document.getElementById('description').innerHTML=Response.weather[0].description;
+  
 })
 .catch(err => console.error(err));
 
 //document.getElementsByClassName('').innerHTML = ;
+
+

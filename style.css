@@ -5,35 +5,37 @@
 }
 
 body{
-    height: 100vh;
-    display: flex;
+    height:100vh;
+    display:flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color:white;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+    align-items:center;
+    background: rgb(147,163,245);
+    background: radial-gradient(circle, rgba(147,163,245,1) 0%, rgba(77,115,244,1) 45%, rgba(70,118,252,0.9906337535014006) 100%);
+
 }
 
-.location, .temperature{
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;;
-}
-.temperature{
-    flex-direction: column;
-}
-.degree-section{
+.location{
     display:flex;
     align-items: center;
+    flex-direction: column;
+}
+#weatherIcon{
+    width: 40%;
 }
 
-.degree-section span{
-    margin: 10px;
-    font-size:30px;
+#city{
+    font-size: 50px;
 }
 
-.degree-section h2{
+#degree{
+    margin-top: -45px; /*just testing if it looks nicer*/
     font-size: 40px;
+    text-align:center;
+}
+
+
+#description{
+    font-size: 30px;
+    text-align:center;
+    font-style: italic;
 }
